@@ -27,8 +27,8 @@ This project contains two seperate NodeRED flows that can run on ony Raspberry P
 ### Step 1: Set Up The Raspberry Pi
 
 #### _If you are starting with a brand new Raspberry Pi, follow these steps to install Raspbian with NOOBS (your Operating System)._
-1. Download NOOBS at this link: https://downloads.raspberrypi.org/NOOBS_latest and extract the NOOBS folder from the zip file._
-2. To format your Micro SD card for NOOBS, you will need a single FAT32 partition. I recommend the free software ApplePi Baker (https://www.tweaking4all.com/hardware/raspberry-pi/macosx-apple-pi-baker/) for Mac users.
+1. Download NOOBS at [this link](https://downloads.raspberrypi.org/NOOBS_latest) and extract the NOOBS folder from the zip file.
+2. To format your Micro SD card for NOOBS, you will need a single FAT32 partition. I recommend the free software [ApplePi Baker](https://www.tweaking4all.com/hardware/raspberry-pi/macosx-apple-pi-baker/) for Mac users.
     1.  There are many other free tools available to accomplish this depending on the system you’re using.
 3. Once the Micro SD card has been formatted, copy the unzipped NOOBS folder onto the card. When this is finished, eject the card and remove it from your computer.
 4. Insert the Micro SD card into the Raspberry Pi, boot it up, and complete the initial setup process.
