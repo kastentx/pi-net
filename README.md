@@ -1,20 +1,17 @@
 # MAX & NodeRED on Raspberry Pi
 
-This project contains two seperate NodeRED flows that can run on ony Raspberry Pi 3 with a camera, which will illustrate the use of using NodeRED and IoT devices to interact with Deep Learning Models from the Model Asset eXchange. These flows also interact with a Seperate NodeRED flow that can be deployed on IBM Cloud, which presents a publicly accesible and configurable dashboard to display the output.
+This project contains two seperate NodeRED flows that can run on ony Raspberry Pi 3 with a camera, which will illustrate the use of using NodeRED and IoT devices to interact with Deep Learning Models from the Model Asset eXchange.
 
 
 ## Pre-requisites:
 1. Raspberry Pi
 2. Micro SD Card (8GB or larger recommended)
 3. Raspberry Pi Camera
-4. Bluemix Account
 
 
 ## Table of Contents
 
 1. Set Up The Raspberry Pi
-
-2. Set Up IBM Cloud & Watson IoT Connections
 
 3. Import the NodeRed Flows
 
@@ -42,12 +39,6 @@ bash <(curl -sL https://raw.githubusercontent.com/node-red/raspbian-deb-package/
 3. Once this completes, run the command ``` sudo raspi-config```.
 4. From this menu, enable SSH and the rPI camera, then choose the option to exit and reboot, installing any updates that may be offered.
 5. From this point on, you can access your Raspberry Pi at the IP found in Step 1 of this process. To access the command line of your Pi use the command ```ssh pi@<your IP here>```. We will access the NodeRED flow GUI at the same IP address later.
-
-### Step 2: Set Up IBM Cloud & Watson IoT Connections 
-1. From the IBM Cloud Catalog, create a new [Node-RED Started](https://console.bluemix.net/catalog/starters/node-red-starter)
-2. You will be taken to the Node-RED starter page. Here you can set up a username / password for your NodeRED instance to secure your flows.
-3. On the 'Overview' page for your app. Select the "Create Connection" button. 
-4. Select Watson IoT Platforom from the list, and ...
 
 ### Step 3: Import the NodeRed Flows
 
