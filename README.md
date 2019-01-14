@@ -36,12 +36,18 @@ This project contains two seperate NodeRED flows that can run on ony Raspberry P
 #### _Initial Pi Setup_
 1. Once the Pi has successfully booted up, open a terminal window and run the command ```hostname -I```. Take note of this IP and record it somewhere, as it will be needed in the next steps to access the pi remotely. 
 2. Install Node.js and NodeRED by entering this command:  
-```bash <(curl -sL https://raw.githubusercontent.com/node-red/raspbian-deb-package/master/resources/update-nodejs-and-nodered)```
+```
+bash <(curl -sL https://raw.githubusercontent.com/node-red/raspbian-deb-package/master/resources/update-nodejs-and-nodered)
+```
 3. Once this completes, run the command ``` sudo raspi-config```.
 4. From this menu, enable SSH and the rPI camera, then choose the option to exit and reboot, installing any updates that may be offered.
 5. From this point on, you can access your Raspberry Pi at the IP found in Step 1 of this process. To access the command line of your Pi use the command ```ssh pi@<your IP here>```. We will access the NodeRED flow GUI at the same IP address later.
 
 ### Step 2: Set Up IBM Cloud & Watson IoT Connections 
+1. From the IBM Cloud Catalog, create a new [Node-RED Started](https://console.bluemix.net/catalog/starters/node-red-starter)
+2. You will be taken to the Node-RED starter page. Here you can set up a username / password for your NodeRED instance to secure your flows.
+3. On the 'Overview' page for your app. Select the "Create Connection" button. 
+4. Select Watson IoT Platforom from the list, and ...
 
 ### Step 3: Import the NodeRed Flows
 
