@@ -24,9 +24,9 @@ This project contains two seperate NodeRED flows that can run on ony Raspberry P
 
 ### Step 0: Run MAX Models on your local computer
 1. You can start the MAX Models needed for this project on you local computer with Docker.
-2. To start the `MAX Image Caption Generator` on `Port 5000` run the command `docker run -it -p 5000:5000 codait/max-image-caption-generator`.
-3. To start the `MAX Facial Recognizer` on `Port 5555` run the command `docker run -it -p 5555:5000 codait/max-facial-recognizer`.
-4. To start the `MAX Audio Classifier` on `Port 7777` run the command `docker run -it -p 7777:5000 codait/max-audio-classifier`.
+2. To start the **MAX Image Caption Generator** on Port 5000 run the command `docker run -it -p 5000:5000 codait/max-image-caption-generator`.
+3. To start the **MAX Facial Recognizer** on Port 5555 run the command `docker run -it -p 5555:5000 codait/max-facial-recognizer`.
+4. To start the **MAX Audio Classifier** on Port 7777 run the command `docker run -it -p 7777:5000 codait/max-audio-classifier`.
 
 ### Step 1: Set Up The Raspberry Pi
 
@@ -39,7 +39,7 @@ This project contains two seperate NodeRED flows that can run on ony Raspberry P
 #### _Initial Pi Setup_
 1. Once the Pi has successfully booted up, open a terminal window and run the command ```hostname -I```. Take note of this IP and record it somewhere, as it will be needed in the next steps to access the pi via SSH. 
 2. Run the command ```sudo raspi-config```.
-3. From the 'Interfacing Options' menu, enable SSH and the camera, then choose 'Finish' to exit and reboot.
+3. From the **Interfacing Options** menu, enable SSH and the camera, then choose **Finish** to exit and reboot.
 4. From this point on, you can access and control your Raspberry Pi with the IP address found in Step 1 of this process. To do this, use the command ```ssh pi@<your IP here>``` from a computer on the same network. We will access the NodeRED flow GUI at the same IP address later.
 5. Install Node.js and NodeRED by entering this command:  
 ```
@@ -54,12 +54,12 @@ bash <(curl -sL https://raw.githubusercontent.com/node-red/raspbian-deb-package/
 4. Open a Web Browser on your computer and navigate to `http://<raspi_ip_address>:1880` to verify the flows have been loaded.
 ### Step 4: Edit the Necessary Nodes
 1. Open the NodeRED Web interface at `http://<raspi_ip_address>:1880`.
-2. From the row of tabs at the top of your flows, select "Camera Settings/ Troubleshooting"
-3. Click the button on the leftmost node labeled "Click to Capture Image". This will display the output of your Raspberry Pi's Camera to verify the settings are correct. If the image is not showing up, or if it needs to be flipped horizontally or vertically, double click the Camera Node to make these adjustments. If you make changes, you can copy this node with `Ctrl-C` and paste it with `Ctrl-V` in the other flows as needed.
-4. On the tabs for flows "Image Caption Generator" and "Facial Recognizer", click the MAX Model node of the same name. Within these nodes, we will need to add a "Service" for each model by clicking the pencil icon and supplying the address (and port) for our MAX model.
+2. From the row of tabs at the top of your flows, select **Camera Settings / Troubleshooting**
+3. Click the button on the leftmost node labeled **Click to Capture Image**. This will display the output of your Raspberry Pi's Camera to verify the settings are correct. If the image is not showing up, or if it needs to be flipped horizontally or vertically, double click the Camera Node to make these adjustments. If you make changes, you can copy this node with `Ctrl-C` and paste it with `Ctrl-V` in the other flows as needed.
+4. On the tabs for flows **Image Caption Generator** and **Facial Recognizer**, click the MAX Model node of the same name. Within these nodes, we will need to add a "Service" for each model by clicking the pencil icon and supplying the address (and port) for our MAX model.
    
 ### Step 5: Interact with MAX Models Through Dashboard
 1. To view the dashboard for your Raspberry Pi, navigate to `http://<raspi_ip_address>:1880/ui` in your web browser.
-2. By default, you should see the Image Caption Generator dashboard. Click on the "Capture Image" button to capture an image on your Raspberry Pi and send it to the appropriate MAX model, displaying the results on this page.
-3. To switch to the Facial Recognizer tab, select the menu icon on the left side of the navbar and choose it from the list.
-4. Click the "Capture Image" button on this page to similarly capture a photo on the Pi and submit it to the MAX Model for prediction.
+2. By default, you should see the _Image Caption Generator_ dashboard. Click on the **Capture Image** button to capture an image on your Raspberry Pi and send it to the appropriate MAX model, displaying the results on this page.
+3. To switch to the _Facial Recognizer_ tab, select the menu icon on the left side of the navbar and choose it from the list.
+4. Click the **Capture Image** button on this page to similarly capture a photo on the Pi and submit it to the MAX Model for prediction.
